@@ -919,29 +919,29 @@ nav ul {
 /* Tabell
 /*********************************************************/
 
-.min-tabell {
-    width: 100%;
+.tabell {
+    width: 50%;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
 }
 
-.min-tabell th, .min-tabell td {
+.tabell th, .tabell td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
-.min-tabell th {
+.tabell th {
     background-color: #f4f4f4;
     font-weight: bold;
 }
 
-.min-tabell tr:nth-child(even) {
+.tabell tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-.min-tabell tr:hover {
+.tabell tr:hover {
     background-color: #e0e0e0;
 }
   
