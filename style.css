@@ -24,9 +24,13 @@ body {
 	font-size: 14px;
 }
 
-.nav-container a {
+.nav-container button {
     color: #393636;
     text-decoration: none;
+	border: none;
+	background-color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
 }
 
 .sweflag {
@@ -40,7 +44,7 @@ nav ul {
     gap: 20px;
 }
 
-.nav-container a:hover{
+.nav-container button:hover{
 	color: #da690d;
 }
 
@@ -56,6 +60,30 @@ nav ul {
 .logo {
     width: auto;
     height: 50px;
+}
+
+
+#contact-menu {
+	z-index: 2000;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background: grey;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+#contact-menu.show {
+    right: 0;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
 }
 
 /*********************************************************/
@@ -323,6 +351,10 @@ nav ul {
 	.service-info li {
         font-size: 0.9rem;
     }
+
+	.phone-text{
+		font-size: 14px;
+	}
 }
 
 
@@ -535,6 +567,53 @@ nav ul {
 	font-family: 'Cinzel', serif;
 	font-weight: bold;
 	margin: 0;
+  }
+
+  @media print{
+	.banner, .nav-container, .menu, .newin, .low-banner, .copyright, .grön {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: avoid;
+    }
+
+	.review-container{
+		margin: 0;
+	}
+
+	.review1, .review2 {
+        width: 100% !important;
+        page-break-inside: avoid;
+        margin: 0;
+        padding: 10px;
+    }
+
+	.review1 p, .review2 p {
+        margin: 5px 0;
+        font-size: 14pt;
+    }
+
+	.vinyl{
+		font-size: 14px;
+	}
+
+	.vinyl-text{
+		color: #000;
+	}
+
+	.review-container{
+		gap: 0;
+	}
+
+	.phone-text h2{
+		color: #fff;
+	}
+	
+
+
   }
 
 /*********************************************************/
@@ -938,3 +1017,6 @@ nav ul {
     background-color: #c0c0c0;
 }
   
+.jstest{
+	background-color: #da690d;
+}

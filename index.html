@@ -5,10 +5,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+	<script src="script.js" defer></script>
 </head>
 
 <body>
-
 	<header>
 		<div class="banner">
 			<a href="index.html"><img src="lib/pryl1900.png" class="logo" alt=""></a>
@@ -17,15 +18,26 @@
 				<img src="lib/SwedenFlag.png" class="sweflag" alt="">
 				<nav>
 					<ul>
-						<li><a href="#">Kontakt</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Varukorg</a></li>
+						<li><button id="contact-button" onclick="document.getElementById('contact-menu').classList.add('active');">Kontakt</button></li>
+						<li><button id="faq-btn">FAQ</button></li>
+						<li><button id="varukorg-btn">Varukorg</button></li>
 					</ul>
-				</nav>
+				</nav>				
+				
 			</div>
 		</div>
 	</header>
 
+	<div id="contact-menu" class="contact-menu">
+		<div class="contact-content">
+			<h2>Kontaktinformation</h2>
+			<p>Telefon: 012-3456789</p>
+			<p>Email: info@pryl1900.se</p>
+			<p>Adress: Kungsgatan 92, 903 31 Umeå</p>
+			<button id="close-button">Stäng</button>
+		</div>
+	</div>
+	
 		<div class="phones">
 			<img src="lib/telefoner.png" class="telefonbild" alt="Bild på telefoner">
 			<div class="phone-text">
