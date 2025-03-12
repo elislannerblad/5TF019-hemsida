@@ -570,7 +570,7 @@ nav ul {
   }
 
   @media print{
-	.banner, .nav-container, .menu, .newin, .low-banner, .copyright, .grön {
+	.banner, .nav-container, .menu, .newin, .low-banner, .copyright, .grön, .vinyl-image, .ad img, .telefonbild{
         display: none;
     }
 
@@ -596,6 +596,11 @@ nav ul {
         font-size: 14pt;
     }
 
+	.service-info p a { 
+        display: block; 
+        page-break-after: always; 
+    }
+
 	.vinyl{
 		font-size: 14px;
 	}
@@ -607,13 +612,6 @@ nav ul {
 	.review-container{
 		gap: 0;
 	}
-
-	.phone-text h2{
-		color: #fff;
-	}
-	
-
-
   }
 
 /*********************************************************/
