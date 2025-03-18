@@ -1,127 +1,198 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
+	<title>Sälj</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sälj</title>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<script src="jquery.js"></script>
+	<script src="script.js" defer></script>
 </head>
+
 <body>
 
 	<header>
 		<div class="banner">
-			<a href="index.html"><img src="lib/pryl1900.png" class="logo"></a>
-			
+			<a href="index.html"><img src="lib/pryl1900.png" class="logo" alt=""></a>
+
 			<div class="nav-container">
-				<img src="lib/SwedenFlag.png" class="sweflag">
+				<img src="lib/SwedenFlag.png" class="sweflag" alt="">
 				<nav>
 					<ul>
-						<li><a href="#">Kontakt</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Varukorg</a></li>
+						<li><button id="contact-button"
+								onclick="document.getElementById('contact-menu').classList.add('active');">Kontakt</button>
+						</li>
+						<button id="faq-btn">FAQ</button>
+						<li><button id="varukorg-btn">Varukorg</button></li>
 					</ul>
 				</nav>
+
 			</div>
 		</div>
 	</header>
 
-		<div class="sell-section">
-			<img src="lib/salja.png" alt="Säljbild">
-		</div>
-
-		<div class="sökväg">
-			<p><a href="index.html">HEM</a> / <a href="salj.html">SÄLJ</a></p>
-		</div>
-
-		<section class="anledningar">
-			<ul>
-				<li>Trygg och smidig affär</li>
-				<li>Bästa priset</li>
-				<li>Snabb hantering</li>
-				<li>Hållbart val</li>
-			</ul>
-		</section>
-
-		<div class="salj">
-			<h3>Att sälja till Pryl 1900</h3>
-			<div class="step-container">
-				<div class="step">
-					<h4>KONTAKTA</h4>
-					<p>Samla dina föremål och skicka bilder till Micke för en snabb bedömning.</p>
-					<img src="lib/camera.png" alt="">
-				</div>
-		
-				<div class="step">
-					<h4>Besök eller Boka</h4>
-					<p>Kom till butiken eller boka hämtning för större mängder.</p>
-					<img src="lib/house.png" alt="">
-				</div>
-
-				<div class="step">
-					<h4>Värdering</h4>
-					<p>Micke gör en bedömning av föremålens värde och kommer överens om pris.</p>
-					<img src="lib/price.png" alt="">
-				</div>
-
-				<div class="step">
-					<h4>Betalning</h4>
-					<p>Få betalt via banköverföring, Swish eller kontant.</p>
-					<img src="lib/card.png" alt="">
-				</div>
+	<div id="overlay"></div>
+	<div id="contact-menu" class="contact-menu">
+		<div class="contact-content">
+			<h2>Kontaktinformation</h2>
+			<div>
+				<p>Telefon: 012-3456789</p>
+			</div>
+			<div>
+				<p>Email: info@pryl1900.se</p>
+			</div>
+			<div>
+				<p>Adress: <a href="https://www.google.com/maps?q=Kungsgatan+92,+Umeå">Kungsgatan 92, 903 31 Umeå</a>
+				</p>
+			</div>
+			<div class="viaformu">
+				<p>Om du har bilder på objekt för värdering eller andra produktfrågor kan du kontakta oss via vårt <a href="salj.html#formu">formulär</a></p>
 			</div>
 		</div>
-		  
-		<section class="formu">
-			<div class="form-rubrik">
-				<h3>Fyll i formuläret för snabb värdering</h3>
-			</div>
-			
-			<div class="form-container">
-				<form class="formulär" action="/submit-form" method="POST">
+	</div>
+
+	<div id="faq" class="faq">
+
+		<div class="faq-container">
+			<h2>Vanliga frågor (FAQ)</h2>
 	
-					<label for="name"></label>
-					<input type="text" id="name" name="name" required placeholder="Ditt namn">
-				
-					<label for="email"></label>
-					<input type="email" id="email" name="email" required placeholder="Din e-postadress">
-				
-					<label for="message"></label>
-					<textarea id="message" name="message" rows="4" required placeholder="Ditt meddelande"></textarea>
-				
-					<button type="submit">SKICKA</button>
-					
-				  </form>
+			<div class="faq-item">
+				<div class="question">Vad säljer butiken?</div>
+				<div class="answer">Butiken säljer endast begagnade varor, inklusive möbler, inredning och andra prylar.</div>
 			</div>
-		</section>
-
-		<div class="copyright">
-			<p>&copy; PRYL 1900</p>
-		  </div>
-
-		<section>
-			<div class="low-banner">
-				<section class="social-media">
-					<h4>HITTA OSS</h4>
-					<a href="https://www.instagram.com/pryl1900/?hl=sv">INSTAGRAM</a>
-					<a href="https://www.facebook.com/watch/?v=1840811606005931">FACEBOOK</a>
-				</section>
-				<section class="questions">
-					<h4>HAR DU FRÅGOR?</h4>
-					<p>FAQ</p>
-					<p>KONTAKTA OSS</p>
-				</section>
-				<section class="payment-methods">
-					<h4>BETALNING</h4>
-					<p>&#174; SWISH</p>
-					<p>&#174;MASTERCARD / &#174;VISA</p>
-				</section>
 		
-				<section class="address">
-					<h4>UMEÅ</h4>
-					<p>KUNGSGATAN 92, 903 31 <br> <a href="https://www.google.com/maps?q=Kungsgatan+92,+Umeå">TILL KARTA</a></p>
-				</section>
+			<div class="faq-item">
+				<div class="question">Vilka betalningsmetoder accepterar ni?</div>
+				<div class="answer">Vi accepterar kortbetalning och Swish.</div>
 			</div>
-		</section>
+		
+			<div class="faq-item">
+				<div class="question">Kan jag byta eller returnera en vara?</div>
+				<div class="answer">Nej, det finns ingen bytesrätt eller garanti på begagnade varor. Du ansvarar själv för att inspektera varan före köp.</div>
+			</div>
+		
+			<div class="faq-item">
+				<div class="question">Var ligger butiken?</div>
+				<div class="answer">Pryl 1900 finns på Kungsgatan 92 i Umeå, mittemot den före detta fiskeaffären Blixt sport.</div>
+			</div>
+		</div>
+
+		<div class="omoss-container">
+			<h2>Om oss</h2>
+			<p>
+				<i>"Min passion är att ständigt lära mig mer om äldre föremål, träffa intressanta människor och återvinna så mycket som möjligt. Jag jobbar enbart med antikviteter och fina föremål, vilket gör att jag kan fokusera på det till 100%.</i>
+			</p>
+			<p>
+				<i>	Efter 12 år i butiken har jag byggt upp en gedigen kunskap och kan erbjuda dig en trygg affär. Jag driver verksamheten med min kärbo och får ibland hjälp av vänner, exempelvis vid tunga lyft."
+				</i>
+			</p>
+			<p>
+				/Micke
+			</p>
+		</div>
+	</div>
+
+	<div class="sell-section">
+		<img src="lib/salja.png" alt="Säljbild">
+	</div>
+
+	<div class="sökväg">
+		<p><a href="index.html">HEM</a> / <a href="salj.html">SÄLJ</a></p>
+	</div>
+
+	<section class="anledningar">
+		<ul>
+			<li>Trygg och smidig affär</li>
+			<li>Bästa priset</li>
+			<li>Snabb hantering</li>
+			<li>Hållbart val</li>
+		</ul>
+	</section>
+
+	<div class="salj">
+		<h3>Att sälja till Pryl 1900</h3>
+		<div class="step-container">
+			<div class="step">
+				<h4>KONTAKTA</h4>
+				<p>Samla dina föremål och skicka bilder till Micke för en snabb bedömning.</p>
+				<img src="lib/camera.png" alt="">
+			</div>
+
+			<div class="step">
+				<h4>Besök eller Boka</h4>
+				<p>Kom till butiken och lämna eller boka hämtning av större mängder.</p>
+				<img src="lib/house.png" alt="">
+			</div>
+
+			<div class="step">
+				<h4>Värdering</h4>
+				<p>Vi gör en bedömning av föremålens värde och kommer överens om pris.</p>
+				<img src="lib/price.png" alt="">
+			</div>
+
+			<div class="step">
+				<h4>Betalning</h4>
+				<p>Få betalt via banköverföring, Swish eller kontant.</p>
+				<img src="lib/card.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<section class="formu" id="formu">
+		<div class="form-rubrik">
+			<h3>Fyll i formuläret för snabb värdering</h3>
+		</div>
+
+		<div class="form-container">
+			<form class="formulär" action="/submit-form" method="POST">
+
+				<label for="name"></label>
+				<input type="text" id="name" name="name" required placeholder="Ditt namn">
+
+				<label for="email"></label>
+				<input type="email" id="email" name="email" required placeholder="Din e-postadress">
+
+				<label for="message"></label>
+				<textarea id="message" name="message" rows="4" required placeholder="Ditt meddelande"></textarea>
+
+				<button type="submit">SKICKA</button>
+
+			</form>
+		</div>
+	</section>
+
+	<div class="copyright">
+		<p>&copy; PRYL 1900</p>
+	</div>
+
+	<section>
+		<div class="low-banner">
+			<section class="social-media">
+				<h4>HITTA OSS</h4>
+				<a href="https://www.instagram.com/pryl1900/?hl=sv">INSTAGRAM</a>
+				<a href="https://www.facebook.com/watch/?v=1840811606005931">FACEBOOK</a>
+			</section>
+			<section class="questions">
+				<h4>HAR DU FRÅGOR?</h4>
+				<p>FAQ</p>
+				<p>KONTAKTA OSS</p>
+			</section>
+			<section class="payment-methods">
+				<h4>BETALNING</h4>
+				<p>&#174; SWISH</p>
+				<p>&#174;MASTERCARD / &#174;VISA</p>
+			</section>
+
+			<section class="address">
+				<h4>UMEÅ</h4>
+				<p>KUNGSGATAN 92, 903 31 <br> <a href="https://www.google.com/maps?q=Kungsgatan+92,+Umeå">TILL KARTA</a>
+				</p>
+			</section>
+		</div>
+	</section>
 
 </body>
+
 </html>
